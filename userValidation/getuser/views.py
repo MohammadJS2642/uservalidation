@@ -1,8 +1,8 @@
-from django.shortcuts import render
-from models import GettingUser
+from django.shortcuts import render, HttpResponse
+from .models import GettingUser
 
 
 # Create your views here.
 def signUp(request):
-    pass
-        
+    '''this method is for sign up users in app'''
+    return HttpResponse('Hello, World!')
