@@ -2,11 +2,6 @@
 .vscode
 userValidation/.vscode/
 
-!**/__pycache__/
-!**/migrations/
-**/__pycache__/
-userValidation/__pycache__/
-
 
 # Created by https://www.toptal.com/developers/gitignore/api/django,python,vscode,database
 # Edit at https://www.toptal.com/developers/gitignore?templates=django,python,vscode,database
