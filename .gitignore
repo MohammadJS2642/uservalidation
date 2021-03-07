@@ -2,3 +2,4 @@
 .vscode
 __pycache__/*
 migrations/*
+userValidation/config/__pycache__/*
