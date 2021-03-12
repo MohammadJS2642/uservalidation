@@ -13,6 +13,7 @@ userValidation/.vscode/
 *.mdb
 *.pdb
 *.sqlite3
+migrations
 
 ### Django ###
 *.log
