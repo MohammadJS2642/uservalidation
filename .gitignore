@@ -14,6 +14,10 @@ userValidation/.vscode/
 *.pdb
 *.sqlite3
 migrations
+*migrations*
+userValidation/migrations/*
+migrations/*
+__pycache__
 
 ### Django ###
 *.log
