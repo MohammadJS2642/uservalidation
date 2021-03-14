@@ -6,6 +6,8 @@ userValidation/.vscode/
 # Created by https://www.toptal.com/developers/gitignore/api/django,python,vscode,database
 # Edit at https://www.toptal.com/developers/gitignore?templates=django,python,vscode,database
 
+
+
 ### Database ###
 *.accdb
 *.db
@@ -18,6 +20,8 @@ migrations
 userValidation/migrations/*
 migrations/*
 __pycache__
+.dbdata
+
 
 ### Django ###
 *.log
