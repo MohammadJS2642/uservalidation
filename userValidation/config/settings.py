@@ -17,6 +17,15 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
+# this is for using informations in local_settings.py
+# try:
+#     # from local_settings import *
+#     import local_settings
+# except:
+#     pass
+# **********************************************
+
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
@@ -77,24 +86,55 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+# for connect to mysql database and use local_settings
+
 
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.mysql',
-#         'USER': 'root',
-#         'PASSWORD': 'mjs',
-#         'NAME': 'userdatavalidation',
+#         'NAME': local_settings.NAME,
+#         'USER': local_settings.USER,
+#         'PASSWORD': local_settings.PASSWORD,
 #         'HOST': 'db',
 #         'PORT': '3306',
 #     }
 # }
+# **************************
 
+# for connect to mysql database
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'userdatavalidation',
+        'USER': 'root',
+        'PASSWORD': 'mjs1',
+        'HOST': 'db',
+        'PORT': '3306',
     }
 }
+# **************************
+
+# this is OK
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'userdatavalidation',
+#         'USER': 'root',
+#         'PASSWORD': 'mjs',
+#         'HOST': '127.0.0.1',
+#         'PORT': '3306',
+#     }
+# }
+# **************************
+
+# for using sqlite3
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+# **************************
 
 
 # Password validation
@@ -134,6 +174,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+'''
+    we can use one of these below way for connect 
+    static files to django project
+'''
+# this:
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# or:
 STATICFILES_DIRS = [
     BASE_DIR / 'static',
 ]
