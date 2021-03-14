@@ -6,4 +6,4 @@ from .models import GettingUser
 def signUp(request):
     '''this method is for sign up users in app'''
     # return HttpResponse('Hello, World!')
-    return render(request, 'index.html')
+    return render(request, 'getuser/index.html')
