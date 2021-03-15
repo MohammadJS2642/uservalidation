@@ -1,0 +1,26 @@
+.geturl {
+    display: flex;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 800;
+    background: lightgray;
+    color: lightcoral;
+    font-size: 3rem;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    text-decoration: none;
+    margin-bottom: 1%;
+}
+
+.geturl:hover {
+    display: flex;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: lightgray;
+    color: lightcoral;
+    font-size: 3rem;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    text-decoration: none;
+    margin-bottom: 1%;
+}

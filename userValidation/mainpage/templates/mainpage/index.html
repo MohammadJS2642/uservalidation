@@ -1,11 +1,14 @@
-<!-- Header -->
-{% extends "base.html" %}
+{% extends "base.html" %} {% block title_bar %}Main Page{% endblock %}
 
-{% block title_bar %}Main Page{% endblock %}
-<!-- end Header -->
 
-<!-- Body -->
+<!--inBody-->
 {% block body_page %}
-    <h1>This is main page</h1>
+<!-- openblock -->
+
+
+<a class="geturl" href="{% url 'getuser:signup' %}">signup</a>
+<a class="geturl" href="{% url 'getuser:signup' %}">login</a>
+
+<!-- blockended -->
 {% endblock %}
-<!-- end Body -->
+<!-- endBody -->

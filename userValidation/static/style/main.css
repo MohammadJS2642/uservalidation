@@ -1,1 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    background: linear-gradient(45deg, #49D49D 10%, #A2C7E5 90%);
+    height: 100vh
+}
+
+main {
+    display: grid;
+    grid-template-columns: 8vh 8vh auto 8vh 8vh;
+    grid-template-rows: 8vh 8vh auto 8vh 8vh;
+    height: 100vh;
+}
+
+#backgroundForm {
+    display: grid;
+    grid-template-columns: 6vh auto 6vh;
+    grid-template-rows: 6vh auto 6vh;
+    background: white;
+    grid-row: 3/4;
+    grid-column: 3/4;
+    border-radius: 25px;
+}
+
+#childbackgroundForm {
+    display: grid;
+    grid-row: 2/3;
+    grid-column: 2/3;
+}
