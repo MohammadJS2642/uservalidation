@@ -1,9 +1,9 @@
 from django.shortcuts import render, HttpResponse
 from django.http import HttpResponseRedirect
 
-# from .models import GettingUserData
+from .models import GettingUserData
 
-# from .forms import SignUpForm
+from .forms import SignUpForm
 
 # Create your views here.
 
