@@ -7,7 +7,7 @@
 
 {% block body_page %}
 <form action="/" method="post">
-    {%csrf_token%} {{form}}
+    {% csrf_token %} {{form}}
     <input type="submit" value="signup">
 </form>
 {% endblock %}

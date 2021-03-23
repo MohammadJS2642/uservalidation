@@ -18,11 +18,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # this is for using informations in local_settings.py
-# try:
-#     # from local_settings import *
-#     import local_settings
-# except:
-#     pass
+try:
+    from local_settings import *
+    # import local_settings
+except ImportError:
+    pass
 # **********************************************
 
 
@@ -104,16 +104,16 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # **************************
 
 # for connect to mysql database
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'userdatavalidation',
-        'USER': 'root',
-        'PASSWORD': 'mjs1',
-        'HOST': 'db',
-        'PORT': '3306',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'userdatavalidation',
+#         'USER': 'user1',
+#         'PASSWORD': 'mjs',
+#         'HOST': 'db',
+#         'PORT': '3306',
+#     }
+# }
 # **************************
 
 # this is OK
@@ -122,20 +122,20 @@ DATABASES = {
 #         'ENGINE': 'django.db.backends.mysql',
 #         'NAME': 'userdatavalidation',
 #         'USER': 'root',
-#         'PASSWORD': 'mjs',
-#         'HOST': '127.0.0.1',
+#         'PASSWORD': "Mjs1378!",
+#         'HOST': 'localhost',
 #         'PORT': '3306',
 #     }
 # }
 # **************************
 
 # for using sqlite3
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 # **************************
 
 

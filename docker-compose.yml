@@ -1,0 +1,55 @@
+version: "3.9"
+
+services:
+  # django app
+  web:
+    # image: djangoapp:1.1
+    build: .
+
+    container_name: djangoApp
+    restart: always
+    working_dir: /UserValidation/userValidation
+
+    command: >
+      bash -c "
+      python manage.py makemigrations
+      && python manage.py migrate
+      && python manage.py runserver 0.0.0.0:8000"
+
+    # command: |
+    #   python manage.py makemigrations &&
+    #   python manage.py migrate &&
+    #   python manage.py runserver &&
+
+    volumes:
+      - ./userValidation:/UserValidation/userValidation
+    ports:
+      - "8000:8000"
+    # depends_on:
+    #   - db
+    expose:
+      - "8000"
+
+  # mysql database
+#   db:
+#     image: mysql:latest
+#     container_name: mysql_db_cont
+#     restart: always
+#     command: --default-authentication-plugin=mysql_native_password
+#     ports:
+#       - "3307:3306"
+#     environment:
+#       MYSQL_HOST: db
+#       MYSQL_DATABASE: userdatavalidation
+#       MYSQL_USER: user1
+#       MYSQL_PASSWORD: mjs
+#       MYSQL_ROOT_PASSWORD: mjs1
+#       MYSQL_PORT: 3306
+
+#     volumes:
+#       - mysql_db:/var/lib/mysql
+
+# # volumes
+# volumes:
+#   mysql_db:
+#     driver: local
